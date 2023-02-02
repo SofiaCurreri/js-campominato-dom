@@ -44,3 +44,8 @@ h1 {
     background-color: rgb(47, 140, 233);
     color: black !important;
 }
+
+.red-bomb {
+    background-color: red !important;
+    color: black !important;
+}

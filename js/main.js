@@ -62,6 +62,19 @@ playButton.addEventListener(
 function createGrid(gridEl, dim, chooseLevel) {
     gridEl.innerHTML = "";
 
+    //creazione bombe
+    const diffBombs = [];
+    let randomNum;
+    const howManyBombs = 16;
+    while (diffBombs.length < howManyBombs) {
+        randomNum = Math.floor((Math.random() * dim) + 1);
+
+        if (!diffBombs.includes(randomNum)) {
+            diffBombs.push(randomNum);
+        }
+    }
+    console.log(diffBombs);
+
     for (let i = 0; i < dim; i++) {
         //per creare e aggiungere le celle
         const square = document.createElement("div");
@@ -83,13 +96,24 @@ function createGrid(gridEl, dim, chooseLevel) {
         const squareNum = i + 1;
         square.innerHTML = squareNum;
 
+
         //per far cambiare colore alla cella se cliccata
         square.addEventListener(
             "click",
             function () {
                 this.classList.toggle("active");
                 console.log("Il numero corrispondente alla cella è ", this.innerHTML);
+
+                //casella rossa se corrisponde ad una bomba
+                for (let j = 0; j < howManyBombs; j++) {
+                    if (this.innerHTML == diffBombs[j]) {
+                        this.classList.add("red-bomb");
+                    }
+                }
             }
         )
     }
+
+
+
 }

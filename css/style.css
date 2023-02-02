@@ -49,3 +49,13 @@ h1 {
     background-color: red !important;
     color: black !important;
 }
+
+/* .game-over {
+    content: "Game Over";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+} */

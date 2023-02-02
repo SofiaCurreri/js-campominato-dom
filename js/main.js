@@ -17,6 +17,10 @@
 //In seguito l'utente clicca su una cella: se il numero è presente nella lista dei numeri generati - abbiamo calpestato una bomba - la cella si colora di rosso e la partita termina.
 // Altrimenti la cella cliccata si colora di azzurro e l'utente può continuare a cliccare sulle altre celle.
 
+// SUPERBONUS 1:
+// Quando si clicca su una bomba e finisce la partita, evitare che si possa cliccare su altre celle.
+// SUPERBONUS 2:
+// Quando si clicca su una bomba e finisce la partita, il software scopre tutte le bombe nascoste.
 
 
 /**************************************************************************
@@ -108,6 +112,7 @@ function createGrid(gridEl, dim, chooseLevel) {
                 for (let j = 0; j < howManyBombs; j++) {
                     if (this.innerHTML == diffBombs[j]) {
                         this.classList.add("red-bomb");
+                        // return gridEl.innerHTML = "";
                     }
                 }
             }

@@ -1,0 +1,46 @@
+body {
+    background-color: rgb(102, 171, 102);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+#grid {
+    width: 1000px;
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    cursor: crosshair;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diff-1 {
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+}
+
+.diff-2 {
+    height: calc(100% / 9);
+    width: calc(100% / 9);
+}
+
+.diff-3 {
+    height: calc(100% / 7);
+    width: calc(100% / 7);
+}
+
+#grid,
+.square {
+    border: 3px solid white;
+}
+
+.square.active {
+    background-color: rgb(47, 140, 233);
+    color: black !important;
+}
